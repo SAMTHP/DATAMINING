@@ -113,7 +113,7 @@ df.head()
 </table>
 </div>
 
-<h3>Étape 3 : Affichage d'un tableau permettant d'avoir le total des diamants segmentés par la qualité (cut)</h3>
+<h3>Étape 3 : Affichage d'un tableau permettant d'avoir le total des diamants en fonction de la qualité (cut)</h3>
 
 ```python
 df.groupby(['cut']).count()
@@ -267,7 +267,7 @@ plt.bar(freq_table['Qualité'], freq_table['Total'])
     
 ![png](output_4_1.png)
     
-<h3>Étape 6(bis) : Ajout d'un index supplémentaire au tableau pour avoir représenter le ratio en pourçentage de chaque qualité de diamants en fonction de leur quantité</h3>
+<h3>Étape 6(bis) : Ajout d'un index supplémentaire au tableau afin de représenter le ratio en pourçentage de chaque qualité de diamants en fonction de leur quantité</h3>
 
 ```python
 freq_table['Total%'] = freq_table['Total']/sum(freq_table['Total'])*100
