@@ -1,39 +1,32 @@
 # DATAMINING
+
+## Analyse univariée
+
+### Étape 1 : Import des librairies et chargement du fichier csv (dataset)
+
 ```python
 import pandas as pd
+import matplotlib.pyplot as plt
 df = pd.read_csv('/home/ubuntu/Documents/DATAMINING/diamonds.csv')
-df.shape
 ```
 
+### Étape 2 : Vérification si le fichier csv est bien chargé
 
+```python
+df.shape
+(53940, 10)
+```
 
-
-    (53940, 10)
-
-
-
-
+> La commande df.shape permet de connaître le nombre de lignes et de colonnes : Ici nous avons 53 940 lignes et 10 colonnes
+    
+    
 ```python
 df.head()
 ```
 
-
-
+> La commande df.head() permet d'avoir un affichage des premières lignes du tableau, et permet donc de s'assurer aussi que nous avons chargé le bon fichier
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -121,29 +114,12 @@ df.head()
 </div>
 
 
-
-
 ```python
 df.groupby(['cut']).count()
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -237,30 +213,12 @@ df.groupby(['cut']).count()
 </div>
 
 
-
-
 ```python
 freq_table = df.groupby(['cut']).size().reset_index(name='Total').rename(columns={'cut': 'Qualité'})
 freq_table
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -299,50 +257,20 @@ freq_table
 </table>
 </div>
 
-
-
-
 ```python
 import matplotlib.pyplot as plt
 plt.bar(freq_table['Qualité'], freq_table['Total'])
 ```
-
-
-
-
-    <BarContainer object of 5 artists>
-
-
-
-
     
 ![png](output_4_1.png)
     
-
-
 
 ```python
 freq_table['Total%'] = freq_table['Total']/sum(freq_table['Total'])*100
 freq_table
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
