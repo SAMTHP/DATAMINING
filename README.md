@@ -123,7 +123,7 @@ sns.lmplot(x='price', y='carat', hue='color', fit_reg=False, data=df)
 
 <h2>3.a Critères qui influencent le prix</h3>
 
-Le critère qui influence le prix et la taille du carat.
+Le critère qui influence le prix est la taille du carat.
 
 <h2>3.b Critères qui influencent le prix</h3>
 
