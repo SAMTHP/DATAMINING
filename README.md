@@ -105,7 +105,7 @@ Le tableau faisant référence à la quantité en fonction de la qualité des di
 De plus au niveaux des prix, nous pouvons remarquer une corrélation entre la taille du carat et son prix.
 Néanmoins, on remarque que la qualité et la clarté ne sont pas les caractéristiques qui impactent les prix d'une manière significative, contrairement aux carats.
 
-<h2>2.b Description des diamants</h2>
+<h2>2.b Anomalies</h2>
 
 Les anomalies remarquées sont la non corrélation entre le prix et la qualité, et le prix et la clarté. 
 Il serait donc plus judicieux de se baser sur le nombre de carats pour déterminer et prévoir les prix.
