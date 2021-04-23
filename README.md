@@ -1,5 +1,8 @@
 <h1>TP DATAMINING</h1>
 
+> Fichier notebook :
+> [TP_DATAMINING.ipynb](TP_DATAMINING.ipynb)
+
 <h2>1. Problématiques</h2>
 
 > A ce stade les données ne sont pas facilement exploitable.
@@ -7,8 +10,6 @@
 > Néanmoins, les problématiques que nous pouvons mettre en avant, sont de savoir par exemple si il y'a une corrélation entre le prix et le carat, le prix et la qualité, et le prix et la clarté des diamants.
 
 <h2>2. Analyse univariée</h2>
-
-> [analyse_univarie.ipynb](analyse_univarie.ipynb)
 
 <h3>Étape 1 : Import des librairies et chargement du fichier csv (dataset)</h3>
 
@@ -175,9 +176,12 @@ sns.lmplot(x='price', y='carat', hue='color', fit_reg=False, data=df)
 
 <h2>3.a Critères qui influencent le prix</h3>
 
-Les critères qui influencent le prix sont :
-* La taille du carat
-* 
+Le critère qui influence le prix et la taille du carat.
+
+<h2>3.b Critères qui influencent le prix</h3>
+
+Lorsque l'on analyse le dernier graphique, on remarque que la couleur ayant la meilleure qualité 'D' n'est pas la plus onéreuse. Cela peut s'expliquer par le fait que la majorité des diamants ayant cette qualité n'ont pas les plus gros carats. De plus, ces diamants sont les plus rares à trouver, et donc moins nombreux dans le dataset.
+
 
 
 
