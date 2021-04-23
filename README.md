@@ -1,6 +1,12 @@
-<h1>DATAMINING</h1>
+<h1>TP DATAMINING</h1>
 
-<h2>Analyse univariée</h2>
+<h2>1. Problématiques</h2>
+
+> A ce stade les données ne sont pas facilement exploitable.
+> En effet, il y a beaucoup trop de données, et il faut donc élabober différentes analyses qui permerttront d'avoir un rendu graphique facilitant l'interprétation de celles-ci.
+> Néanmoins, les problématiques que nous pouvons mettre en avant, sont de savoir par exemple si il y'a une corrélation entre le prix et le carat, le prix et la qualité, et le prix et la clarté des diamants.
+
+<h2>2. Analyse univariée</h2>
 
 <h3>Étape 1 : Import des librairies et chargement du fichier csv (dataset)</h3>
 
@@ -142,4 +148,17 @@ sns.boxplot(x='carat', y='price', data=df)
 sns.barplot(x='clarity', y='price', data=df)
 ```
 ![png](clarity.png)
+
+<h2>2.a Description des diamants</h2>
+
+Le tableau faisant référence à la quantité en fonction de la qualité des diamants, nous montre que nous avons beaucoup plus de diamants de bonnes qualités par rapport aux qualités les plus basses.
+De plus au niveaux des prix, nous pouvons remarquer une corrélation entre la taille du carat et son prix.
+Néanmoins, on remarque que la qualité et la clarté ne sont pas les caractéristiques qui impactent les prix d'une manière significative, contrairement aux carats.
+
+<h2>2.b Description des diamants</h2>
+
+Les anomalies remarquées sont la non corrélation entre le prix et la qualité, et le prix et la clarté. 
+Il serait donc plus judicieux de se baser sur le nombre de carats pour déterminer et prévoir les prix.
+
+<h2>3. Analyse bivariée / tri variée</h3>
 
