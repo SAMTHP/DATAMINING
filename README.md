@@ -216,7 +216,7 @@ df.corr()
 
 <h2>3.a Critères qui influencent le prix</h3>
 
-Le critère qui influence le prix est la taille du carat, comme le démontre le tableau relatant les coefficients de corrélation.
+Le critère qui influence le prix est la taille du carat, comme le démontre le tableau relatant les coefficients de corrélation, où l'on peut voir un coefficient de corrélation entre le prix et le carat de 0.921591.
 
 <h2>3.b Corrélation entre le prix et la couleur</h3>
 
