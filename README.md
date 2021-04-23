@@ -213,9 +213,27 @@ df.groupby(['cut']).count()
 </table>
 </div>
 
-<h3>Étape 4 : Création des différents tableaux qui permettront d'élaborer les différents graphiques</h3>
+<h3>Étape 4 : Création des différents  graphiques</h3>
 
-<h4></h4>
+<h4>Cut / Price</h4>
+
+```python
+sns.barplot(x='cut', y='price', data=df)
+```
+
+<h4>Cara / Price</h4>
+
+```python
+sns.boxplot(x='carat', y='price', data=df)
+```
+
+![png](output_8_1.png)
+
+<h4>Clarity / Price</h4>
+
+```python
+sns.barplot(x='clarity', y='price', data=df)
+```
 
 ```python
 freq_table = df.groupby(['cut']).size().reset_index(name='Total').rename(columns={'cut': 'Qualité'})
@@ -263,11 +281,7 @@ freq_table
 
 <h3>Étape 5 : Création d'un graphique en bâton qui prendra comme base le nouveau tableau créé</h3>
 
-```python
-plt.bar(freq_table['Qualité'], freq_table['Total'])
-```
-    
-![png](output_4_1.png)
+
     
 <h3>Étape 6(bis) : Ajout d'un index supplémentaire au tableau afin de représenter le ratio en pourçentage de chaque qualité de diamants en fonction de leur quantité</h3>
 
@@ -321,11 +335,3 @@ freq_table
 </table>
 </div>
 
-
-
-```python
-sns.boxplot(x='carat', y='price', data=df)
-```
-
-![png](output_8_1.png)
-    
