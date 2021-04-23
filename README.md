@@ -213,7 +213,9 @@ df.groupby(['cut']).count()
 </table>
 </div>
 
-<h3>Étape 4 : Création d'un tableau avec seulement deux colonnes `Qualité` et `Total`</h3>
+<h3>Étape 4 : Création des différents tableaux qui permettront d'élaborer les différents graphiques</h3>
+
+<h4></h4>
 
 ```python
 freq_table = df.groupby(['cut']).size().reset_index(name='Total').rename(columns={'cut': 'Qualité'})
@@ -318,3 +320,12 @@ freq_table
   </tbody>
 </table>
 </div>
+
+
+
+```python
+sns.boxplot(x='carat', y='price', data=df)
+```
+
+![png](output_8_1.png)
+    
