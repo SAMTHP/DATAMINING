@@ -8,6 +8,8 @@
 
 <h2>2. Analyse univariée</h2>
 
+> [analyse_univarie.ipynb](analyse_univarie.ipynb)
+
 <h3>Étape 1 : Import des librairies et chargement du fichier csv (dataset)</h3>
 
 ```python
