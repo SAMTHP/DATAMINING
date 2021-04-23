@@ -1,8 +1,8 @@
-# DATAMINING
+<h1>DATAMINING</h1>
 
-## Analyse univariée
+<h2>Analyse univariée</h2>
 
-### Étape 1 : Import des librairies et chargement du fichier csv (dataset)
+<h3>Étape 1 : Import des librairies et chargement du fichier csv (dataset)</h3>
 
 ```python
 import pandas as pd
@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('/home/ubuntu/Documents/DATAMINING/diamonds.csv')
 ```
 
-### Étape 2 : Vérification si le fichier csv est bien chargé
+<h3>Étape 2 : Vérification si le fichier csv est bien chargé</h3>
 
 ```python
 df.shape
@@ -113,7 +113,7 @@ df.head()
 </table>
 </div>
 
-### Étape 3 : Affichage d'un tableau permettant d'avoir le total des diamants segmentés par la qualité (cut)
+<h3>Étape 3 : Affichage d'un tableau permettant d'avoir le total des diamants segmentés par la qualité (cut)</h3>
 
 ```python
 df.groupby(['cut']).count()
@@ -212,7 +212,7 @@ df.groupby(['cut']).count()
 </table>
 </div>
 
-### Étape 4 : Création d'un tableau avec seulement deux colonnes `Qualité` et `Total`
+<h3>Étape 4 : Création d'un tableau avec seulement deux colonnes `Qualité` et `Total`</h3>
 
 ```python
 freq_table = df.groupby(['cut']).size().reset_index(name='Total').rename(columns={'cut': 'Qualité'})
@@ -258,7 +258,7 @@ freq_table
 </table>
 </div>
 
-### Étape 5 : Création d'un graphique en bâton qui prendra comme base le nouveau tableau créé
+<h3>Étape 5 : Création d'un graphique en bâton qui prendra comme base le nouveau tableau créé</h3>
 
 ```python
 import matplotlib.pyplot as plt
@@ -267,7 +267,7 @@ plt.bar(freq_table['Qualité'], freq_table['Total'])
     
 ![png](output_4_1.png)
     
-### Étape 6(bis) : Ajout d'un index supplémentaire au tableau pour avoir représenter le ratio en pourçentage de chaque qualité de diamants en fonction de leur quantité
+<h3>Étape 6(bis) : Ajout d'un index supplémentaire au tableau pour avoir représenter le ratio en pourçentage de chaque qualité de diamants en fonction de leur quantité</h3>
 
 ```python
 freq_table['Total%'] = freq_table['Total']/sum(freq_table['Total'])*100
