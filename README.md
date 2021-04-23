@@ -164,3 +164,20 @@ Il serait donc plus judicieux de se baser sur le nombre de carats pour détermin
 
 <h2>3. Analyse bivariée / tri variée</h3>
 
+<h3>Création d'un graphique pertinent</h3>
+
+<h4>Carat / Price / Color</h4>
+
+```python
+sns.lmplot(x='price', y='carat', hue='color', fit_reg=False, data=df)
+```
+![color_bivarie](color_bivarie.png)
+
+<h2>3.a Critères qui influencent le prix</h3>
+
+Les critères qui influencent le prix sont :
+* La taille du carat
+* 
+
+
+
