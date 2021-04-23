@@ -112,7 +112,7 @@ Il serait donc plus judicieux de se baser sur le nombre de carats pour détermin
 
 <h2>3. Analyse bivariée / tri variée</h3>
 
-<h3>Création d'un graphique pertinent</h3>
+<h3>Création de graphiques pertinents</h3>
 
 <h4>Carat / Price / Color</h4>
 
@@ -121,11 +121,104 @@ sns.lmplot(x='price', y='carat', hue='color', fit_reg=False, data=df)
 ```
 ![color_bivarie](color_bivarie.png)
 
+<h4>Génération des coefficients de corrélation</h4>
+
+```python
+df.corr()
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>depth</th>
+      <th>table</th>
+      <th>price</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>carat</th>
+      <td>1.000000</td>
+      <td>0.028224</td>
+      <td>0.181618</td>
+      <td>0.921591</td>
+      <td>0.975094</td>
+      <td>0.951722</td>
+      <td>0.953387</td>
+    </tr>
+    <tr>
+      <th>depth</th>
+      <td>0.028224</td>
+      <td>1.000000</td>
+      <td>-0.295779</td>
+      <td>-0.010647</td>
+      <td>-0.025289</td>
+      <td>-0.029341</td>
+      <td>0.094924</td>
+    </tr>
+    <tr>
+      <th>table</th>
+      <td>0.181618</td>
+      <td>-0.295779</td>
+      <td>1.000000</td>
+      <td>0.127134</td>
+      <td>0.195344</td>
+      <td>0.183760</td>
+      <td>0.150929</td>
+    </tr>
+    <tr>
+      <th>price</th>
+      <td>0.921591</td>
+      <td>-0.010647</td>
+      <td>0.127134</td>
+      <td>1.000000</td>
+      <td>0.884435</td>
+      <td>0.865421</td>
+      <td>0.861249</td>
+    </tr>
+    <tr>
+      <th>x</th>
+      <td>0.975094</td>
+      <td>-0.025289</td>
+      <td>0.195344</td>
+      <td>0.884435</td>
+      <td>1.000000</td>
+      <td>0.974701</td>
+      <td>0.970772</td>
+    </tr>
+    <tr>
+      <th>y</th>
+      <td>0.951722</td>
+      <td>-0.029341</td>
+      <td>0.183760</td>
+      <td>0.865421</td>
+      <td>0.974701</td>
+      <td>1.000000</td>
+      <td>0.952006</td>
+    </tr>
+    <tr>
+      <th>z</th>
+      <td>0.953387</td>
+      <td>0.094924</td>
+      <td>0.150929</td>
+      <td>0.861249</td>
+      <td>0.970772</td>
+      <td>0.952006</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2>3.a Critères qui influencent le prix</h3>
 
-Le critère qui influence le prix est la taille du carat.
+Le critère qui influence le prix est la taille du carat, comme le démontre le tableau relatant les coefficients de corrélation.
 
-<h2>3.b Critères qui influencent le prix</h3>
+<h2>3.b Corrélation entre le prix et la couleur</h3>
 
 Lorsque l'on analyse le dernier graphique, on remarque que la couleur ayant la meilleure qualité 'D' n'est pas la plus onéreuse. Cela peut s'expliquer par le fait que la majorité des diamants ayant cette qualité n'ont pas les plus gros carats. De plus, ces diamants sont les plus rares à trouver, et donc moins nombreux dans le dataset.
 
