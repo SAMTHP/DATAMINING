@@ -7,6 +7,7 @@
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 df = pd.read_csv('/home/ubuntu/Documents/DATAMINING/diamonds.csv')
 ```
 
@@ -261,7 +262,6 @@ freq_table
 <h3>Étape 5 : Création d'un graphique en bâton qui prendra comme base le nouveau tableau créé</h3>
 
 ```python
-import matplotlib.pyplot as plt
 plt.bar(freq_table['Qualité'], freq_table['Total'])
 ```
     
