@@ -33,7 +33,8 @@ df.shape
 <h3>Étape 3 : Affichage d'un tableau permettant d'avoir le total des diamants en fonction de la qualité (cut)</h3>
 
 ```python
-df.groupby(['cut']).count()
+freq_table = df.groupby(['cut']).size().reset_index(name='Total').rename(columns={'cut': 'Qualité'})
+freq_table
 ```
 
 <div>
@@ -41,88 +42,34 @@ df.groupby(['cut']).count()
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>carat</th>
-      <th>color</th>
-      <th>clarity</th>
-      <th>depth</th>
-      <th>table</th>
-      <th>price</th>
-      <th>x</th>
-      <th>y</th>
-      <th>z</th>
-    </tr>
-    <tr>
-      <th>cut</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Qualité</th>
+      <th>Total</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>Fair</th>
-      <td>1610</td>
-      <td>1610</td>
-      <td>1610</td>
-      <td>1610</td>
-      <td>1610</td>
-      <td>1610</td>
-      <td>1610</td>
-      <td>1610</td>
+      <th>0</th>
+      <td>Fair</td>
       <td>1610</td>
     </tr>
     <tr>
-      <th>Good</th>
-      <td>4906</td>
-      <td>4906</td>
-      <td>4906</td>
-      <td>4906</td>
-      <td>4906</td>
-      <td>4906</td>
-      <td>4906</td>
-      <td>4906</td>
+      <th>1</th>
+      <td>Good</td>
       <td>4906</td>
     </tr>
     <tr>
-      <th>Ideal</th>
-      <td>21551</td>
-      <td>21551</td>
-      <td>21551</td>
-      <td>21551</td>
-      <td>21551</td>
-      <td>21551</td>
-      <td>21551</td>
-      <td>21551</td>
+      <th>2</th>
+      <td>Ideal</td>
       <td>21551</td>
     </tr>
     <tr>
-      <th>Premium</th>
-      <td>13791</td>
-      <td>13791</td>
-      <td>13791</td>
-      <td>13791</td>
-      <td>13791</td>
-      <td>13791</td>
-      <td>13791</td>
-      <td>13791</td>
+      <th>3</th>
+      <td>Premium</td>
       <td>13791</td>
     </tr>
     <tr>
-      <th>Very Good</th>
-      <td>12082</td>
-      <td>12082</td>
-      <td>12082</td>
-      <td>12082</td>
-      <td>12082</td>
-      <td>12082</td>
-      <td>12082</td>
-      <td>12082</td>
+      <th>4</th>
+      <td>Very Good</td>
       <td>12082</td>
     </tr>
   </tbody>
